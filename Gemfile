@@ -82,7 +82,7 @@ gem 'webpacker'
 gem 'dotenv-rails', groups: [:development, :test]
 
 # Cloudinary
-gem 'cloudinary', '~> 1.12.0'
+gem 'cloudinary'
 
 # PWA
 gem "serviceworker-rails"
