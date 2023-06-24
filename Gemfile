@@ -74,8 +74,7 @@ group :test do
 end
 
 gem 'pundit'
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-gem 'bootsnap', require: false
+gem 'faker'
 gem 'devise'
 gem 'webpacker'
 
