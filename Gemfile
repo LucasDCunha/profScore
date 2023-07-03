@@ -80,6 +80,7 @@ gem "font-awesome-sass"
 gem 'faker'
 gem 'devise'
 gem 'webpacker'
+gem 'bootstrap'
 
 # Env file
 gem 'dotenv-rails', groups: [:development, :test]
