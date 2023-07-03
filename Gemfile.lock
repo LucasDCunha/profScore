@@ -309,7 +309,7 @@ DEPENDENCIES
   pry-rails
   puma
   pundit
-  rails (~> 7.0.5)
+  rails (~> 7.0.6)
   redis
   sassc-rails
   selenium-webdriver
