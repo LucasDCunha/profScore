@@ -10,19 +10,16 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
-                    <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="#servicos">Serviços</a></li>
+                    <li><a class="nav-link scrollto" href="#departamentos">Departamentos</a></li>
+                    <li><a class="nav-link scrollto" href="#professores">Professores</a></li>
                 </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
+            </nav>
             
             <div>
                 <% if user_signed_in? %>
-                    <%= link_to destroy_user_session_path, method: :delete, class: "appointment-btn scrollto" do %>
-                        Logout
+                    <%= link_to root_path, class: "appointment-btn scrollto" do %>
+                        Avaliar
                     <% end %>
                 <% else %>
                     <%= link_to new_user_session_path, class: "appointment-btn scrollto" do %>
