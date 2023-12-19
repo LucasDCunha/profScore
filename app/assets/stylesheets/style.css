@@ -3,6 +3,14 @@ body {
   color: #444444;
 }
 
+.color-default {
+  color: #1977cc;
+}
+
+.color-secondary {
+  color: #2c4964;
+}
+
 a {
   color: #1977cc;
   text-decoration: none;
