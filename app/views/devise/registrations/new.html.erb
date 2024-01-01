@@ -1,0 +1,45 @@
+<main class="d-flex justify-content-around align-items-center bg-color mt-5 pt-5">
+  <div class="d-flex justify-content-end align-items-center flex-column mt-5">
+      <div class="card border-default" style="width: 24rem;">
+          <div class="card-body">
+              <h2 class="color-secondary mt-3 font-weight-normal"> Crie sua conta </h2>
+              <div>
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                  <div class="form-group my-3">
+                    <label class="color-secondary">Email</label>
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control azul font-12 w-100 border-default' %>
+                  </div>
+
+                  <div class="form-group my-3">
+                    <label class="color-secondary">Senha</label>
+                    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control azul font-12 w-100 border-default' %>
+                  </div>
+
+                  <div class="form-group my-3">
+                    <label class="color-secondary">Confirmar senha</label>
+                    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control azul font-12 w-100 border-default' %>
+                  </div>
+
+                  <% if devise_mapping.rememberable? %>
+                    <div class="form-group my-3 d-flex align-items-center">
+                      <%= f.check_box :remember_me %>
+                      <label class="color-secondary mb-0 lembrar-login">Lembrar de mim nesse computador</label>
+                    </div>
+                  <% end %>
+
+                  <div class="form-group ">
+                    <%= f.submit "Criar conta", class: 'btn color-default border-default w-100' %>
+                  </div>
+                <% end %>
+
+                <hr class="border border-dark" id='linha-login'>
+
+                <div class="d-flex justify-content-center">
+                  <%= link_to "Login", new_session_path(resource_name), class: "color-secondary font-weight-bold"%>
+                </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</main>

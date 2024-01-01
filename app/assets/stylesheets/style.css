@@ -11,6 +11,18 @@ body {
   color: #2c4964;
 }
 
+.lembrar-login{
+  margin-left: 8px !important;
+}
+
+.border-default{
+  border: 1px solid #1977cc;
+}
+
+.border-default:hover{
+  border: 1px solid #1977cc;
+}
+
 a {
   color: #1977cc;
   text-decoration: none;
