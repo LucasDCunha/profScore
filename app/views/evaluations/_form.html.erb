@@ -1,0 +1,17 @@
+<%= form_with(model: evaluation) do |form| %>
+  <% if evaluation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(evaluation.errors.count, "error") %> prohibited this evaluation from being saved:</h2>
+
+      <ul>
+        <% evaluation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -79,12 +79,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_29_172846) do
     t.index ["Teacher_id"], name: "index_subject_teacher_periods_on_Teacher_id"
   end
 
-  create_table "subjetcs", force: :cascade do |t|
+  create_table "subjects", force: :cascade do |t|
     t.string "name"
     t.string "code"
     t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "mandatory"
   end
 
   create_table "teachers", force: :cascade do |t|

@@ -1,6 +1,6 @@
 class CreateSubjects < ActiveRecord::Migration[7.0]
   def change
-    create_table :subjetcs do |t|
+    create_table :subjects do |t|
 
       t.string :name, presence: true
       t.string :code, presence: true
