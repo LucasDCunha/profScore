@@ -1,0 +1,17 @@
+.teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 992px) {
+    .teachers-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.span-email {
+    padding: 8px;
+    cursor: pointer;
+}

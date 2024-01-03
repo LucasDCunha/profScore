@@ -9,10 +9,9 @@
         <div class='d-flex align-items-center'>
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><%= link_to 'Professores', teachers_path, class: "nav-link scrollto" %></li>
-                    <li><%= link_to 'Disciplinas', subjects_path, class: "nav-link scrollto" %></li>
-                    <li><a class="nav-link scrollto" href="#professores">Professores</a></li>
+                    <li><%= link_to 'Home', root_path, class: "nav-link scrollto #{'active' if current_page?(root_path)}" %></li>
+                    <li><%= link_to 'Professores', teachers_path, class: "nav-link scrollto #{'active' if current_page?(teachers_path)}" %></li>
+                    <li><%= link_to 'Disciplinas', subjects_path, class: "nav-link scrollto #{'active' if current_page?(subjects_path)}" %></li>
                 </ul>
             </nav>
             

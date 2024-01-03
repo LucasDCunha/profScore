@@ -1,14 +1,91 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Teachers</h1>
+<main id="main">
 
-<div id="teachers">
-  <% @teachers.each do |teacher| %>
-    <%= render teacher %>
-    <p>
-      <%= link_to "Show this teacher", teacher %>
-    </p>
-  <% end %>
-</div>
+  <!-- ======= Breadcrumbs Section ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
 
-<%= link_to "New teacher", new_teacher_path %>
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Professores</h2>
+        <ol>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Professores', teachers_path %></li>
+        </ol>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs Section -->
+
+<div class="toast fade mx-auto toast-success toast-fixed" id="basic-success-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-toast-init="" data-mdb-autohide="true" data-mdb-delay="2000" data-mdb-position="top-right" data-mdb-append-to-body="true" data-mdb-stacking="true" data-mdb-width="350px" data-mdb-color="success" data-mdb-toast-initialized="true" style="width: 350px; display: block; top: 10px; right: 10px; bottom: unset; left: unset; transform: unset;">
+          <div class="toast-header toast-success">
+            <strong class="me-auto">MDBootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-mdb-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">Success Basic Example</div>
+        </div>
+<button type="button" class="btn btn-success" id="basic-success-trigger" data-mdb-ripple-init="" style="">Success</button>
+  <section class="inner-page">
+    <div class="container">
+      <div class="teachers-grid">
+        <% @teachers.each do |teacher| %>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><%= teacher.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= teacher.position %></h6>
+              <%= link_to "#{ teacher.lattes }", target: "_blank" do %>
+                  <i class="fa-solid fa-building-columns pt-2" data-toggle="tooltip" data-placement="top" title="Lattes"></i>
+              <% end %>
+              <span class="span-email color-default" onclick="copyEmail(<%= teacher.email.to_json %>)" data-toggle="tooltip" data-placement="top" title="Copiar email">
+                  <i class="fa-regular fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <%= link_to "New teacher", new_teacher_path %>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // copy email function
+  function copyEmail(text) {
+    navigator.clipboard.writeText(text);
+  }
+
+  const triggers = [
+  'primary',
+  'secondary',
+  'success',
+  'danger',
+  'warning',
+  'info',
+  'light',
+  'dark',
+];
+const basicInstances = [
+  'alert-primary',
+  'alert-secondary',
+  'alert-success',
+  'alert-danger',
+  'alert-warning',
+  'alert-info',
+  'alert-light',
+  'alert-dark',
+];
+
+triggers.forEach((trigger, index) => {
+  let basicInstance = mdb.Alert.getInstance(document.getElementById(basicInstances[index]));
+  document.getElementById(trigger).addEventListener('click', () => {
+    basicInstance.show();
+  });
+});
+</script>
