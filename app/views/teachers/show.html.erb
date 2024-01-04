@@ -4,7 +4,12 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2><%= @teacher.name %></h2>
+        <div class="d-flex align-items-center">
+          <%= link_to teachers_path do %>
+              <i class="fa-solid fa-arrow-left p-2 text-dark" data-toggle="tooltip" data-placement="top" title="Votar"></i>
+          <% end %>
+          <h2><%= @teacher.name %></h2>
+        </div>
         <ol>
           <li><%= link_to 'Home', root_path %></li>
           <li><%= link_to 'Professores', teachers_path %></li>
@@ -17,24 +22,18 @@
 
   <section class="inner-page">
     <div class="container">
-      <div class="teachers-grid">
-          <div class="card">
-            <div class="card-body">
-              <div class='d-flex justify-content-between'>
-                <h5 class="card-title"><%= @teacher.name %></h5>
-                <h5 class="card-title mx-2"><%= @teacher.overallGrade %></h5>
-              </div>
-              <h6 class="card-subtitle mb-2 text-muted"><%= @teacher.position %></h6>
-              <%= link_to "#{ @teacher.lattes }", target: "_blank" do %>
-                  <i class="fa-solid fa-building-columns pt-2" data-toggle="tooltip" data-placement="top" title="Lattes"></i>
-              <% end %>
-              <span class="span-email color-default" onclick="copyEmail(<%= @teacher.email.to_json %>)" data-toggle="tooltip" data-placement="top" title="Copiar email">
-                  <i class="fa-regular fa-envelope"></i>
-              </span>
-            </div>
-          </div>
+      <div class='row'>
+        <div class="col-3 d-flex">
+          <span class='grade color-default mx-2'><%= @teacher.overallGrade %></span><span class='color-secondary pt-4 mx-2'> / 10</span>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
+
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>  
