@@ -15,3 +15,11 @@
     padding: 8px;
     cursor: pointer;
 }
+
+.toast-copied {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    margin: 20px;
+    z-index: 9999;
+}

@@ -1,5 +1,3 @@
-<p style="color: green"><%= notice %></p>
-
 <main id="main">
 
   <!-- ======= Breadcrumbs Section ======= -->
@@ -17,15 +15,6 @@
     </div>
   </section><!-- End Breadcrumbs Section -->
 
-<div class="toast fade mx-auto toast-success toast-fixed" id="basic-success-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-toast-init="" data-mdb-autohide="true" data-mdb-delay="2000" data-mdb-position="top-right" data-mdb-append-to-body="true" data-mdb-stacking="true" data-mdb-width="350px" data-mdb-color="success" data-mdb-toast-initialized="true" style="width: 350px; display: block; top: 10px; right: 10px; bottom: unset; left: unset; transform: unset;">
-          <div class="toast-header toast-success">
-            <strong class="me-auto">MDBootstrap</strong>
-            <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-mdb-dismiss="toast" aria-label="Close"></button>
-          </div>
-          <div class="toast-body">Success Basic Example</div>
-        </div>
-<button type="button" class="btn btn-success" id="basic-success-trigger" data-mdb-ripple-init="" style="">Success</button>
   <section class="inner-page">
     <div class="container">
       <div class="teachers-grid">
@@ -51,6 +40,16 @@
 
 </main>
 
+<!-- Toast Modal -->
+<div class="toast toast-copied bg-success" id="copiedToast">
+  <div class="toast-header">
+      <strong class="mr-auto">Sucesso!</strong>
+  </div>
+  <div class="toast-body text-white">
+      O email foi copiado para sua área de transferência.
+  </div>
+</div>
+
 <script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -59,33 +58,9 @@
   // copy email function
   function copyEmail(text) {
     navigator.clipboard.writeText(text);
+    $('#copiedToast').toast('show');
+    setTimeout(function () {
+        $('#copiedToast').toast('hide');
+    }, 2000);
   }
-
-  const triggers = [
-  'primary',
-  'secondary',
-  'success',
-  'danger',
-  'warning',
-  'info',
-  'light',
-  'dark',
-];
-const basicInstances = [
-  'alert-primary',
-  'alert-secondary',
-  'alert-success',
-  'alert-danger',
-  'alert-warning',
-  'alert-info',
-  'alert-light',
-  'alert-dark',
-];
-
-triggers.forEach((trigger, index) => {
-  let basicInstance = mdb.Alert.getInstance(document.getElementById(basicInstances[index]));
-  document.getElementById(trigger).addEventListener('click', () => {
-    basicInstance.show();
-  });
-});
 </script>
