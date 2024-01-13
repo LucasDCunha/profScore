@@ -1,0 +1,21 @@
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 992px) {
+    .subjects-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.sub-count {
+    background-color: #1977cc;
+    opacity: 0.8;
+    color: white;
+    font-size: smaller;
+    border-radius: 4px;
+    padding: 2px 8px 2px 8px;
+}

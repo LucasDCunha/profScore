@@ -1,14 +1,119 @@
-<p style="color: green"><%= notice %></p>
+<main id="main">
+  <!-- ======= Breadcrumbs Section ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
 
-<h1>Subjects</h1>
+      <div class="d-flex justify-content-between align-items-center">
+        <span style='display: flex' class='align-items-center'>
+          <%= link_to root_path, class: "color-secondary" do %>
+              <i class="fa-solid fa-arrow-left"></i>
+          <% end %>
+          <h2 style='margin: 0 0 0 12px;'>Disciplinas</h2>
+        </span>
+        <ol>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Disciplinas', subjects_path %></li>
+        </ol>
+      </div>
 
-<div id="subjects">
-  <% @subjects.each do |subject| %>
-    <%= render subject %>
-    <p>
-      <%= link_to "Show this subject", subject %>
-    </p>
-  <% end %>
-</div>
+    </div>
+  </section><!-- End Breadcrumbs Section -->
 
-<%= link_to "New subject", new_subject_path %>
+  <section class="inner-page">
+    <div class="container">
+      <h5>Obrigatorias 2008 <span class='sub-count'><%= @subjectsOldMand.count %></h5>
+      <div class="subjects-grid">
+        <% @subjectsOldMand.each do |subject| %>
+          <div class="card border-default">
+            <div class="card-body"> 
+              <h5 class="card-title"><%= subject.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= subject.code %></h6>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-page">
+    <div class="container">
+      <h5>Optativas 2008 <span class='sub-count'><%= @subjectsOldNMand.count %></h5>
+      <div class="subjects-grid">
+        <% @subjectsOldNMand.each do |subject| %>
+          <div class="card border-default">
+            <div class="card-body"> 
+              <h5 class="card-title"><%= subject.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= subject.code %></h6>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-page">
+    <div class="container">
+      <h5>Obrigatorias 2023 <span class='sub-count'><%= @subjectsNewMand.count %></span></h5>
+      <div class="subjects-grid">
+        <% @subjectsNewMand.each do |subject| %>
+          <div class="card border-default">
+            <div class="card-body"> 
+              <h5 class="card-title"><%= subject.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= subject.code %></h6>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-page">
+    <div class="container">
+      <h5>Optativas 2023 <span class='sub-count'><%= @subjectsNewNMand.count %></span></h5>
+      <div class="subjects-grid">
+        <% @subjectsNewNMand.each do |subject| %>
+          <div class="card border-default">
+            <div class="card-body"> 
+              <h5 class="card-title"><%= subject.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= subject.code %></h6>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-page">
+    <div class="container">
+      <h5>Todas disciplinas <span class='sub-count'><%= @subjects.count %></span></h5>
+      <div class="subjects-grid">
+        <% @subjects.each do |subject| %>
+          <div class="card border-default">
+            <div class="card-body"> 
+              <h5 class="card-title"><%= subject.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= subject.code %></h6>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<%= render 'shared/toastSucessoCopiaEmail' %>
+
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // copy email function
+  function copyEmail(text) {
+    navigator.clipboard.writeText(text);
+    $('#copiedToast').toast('show');
+    setTimeout(function () {
+        $('#copiedToast').toast('hide');
+    }, 2000);
+  }
+</script>

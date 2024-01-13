@@ -4,7 +4,12 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Professores</h2>
+        <span style='display: flex' class='align-items-center'>
+          <%= link_to root_path, class: "color-secondary" do %>
+              <i class="fa-solid fa-arrow-left"></i>
+          <% end %>
+          <h2 style='margin: 0 0 0 12px;'>Professores</h2>
+        </span>
         <ol>
           <li><%= link_to 'Home', root_path %></li>
           <li><%= link_to 'Professores', teachers_path %></li>
@@ -43,15 +48,7 @@
 
 </main>
 
-<!-- Toast Modal -->
-<div class="toast toast-copied bg-success" id="copiedToast">
-  <div class="toast-header">
-      <strong class="mr-auto">Sucesso!</strong>
-  </div>
-  <div class="toast-body text-white">
-      O email foi copiado para sua área de transferência.
-  </div>
-</div>
+<%= render 'shared/toastSucessoCopiaEmail' %>
 
 <script>
   $(function () {

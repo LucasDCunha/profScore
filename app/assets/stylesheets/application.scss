@@ -1,6 +1,8 @@
 @import "font-awesome";
 @import "style";
 @import "teachers";
+@import "subjects";
+@import "home";
 
 .color-default {
     color: #1977cc;
@@ -8,4 +10,16 @@
 
 .color-secondary {
     color: #2c4964;
+}
+
+.border-default{
+    border: 1px solid #1977cc;
+}
+
+.border-default:hover{
+    border: 1px solid #1977cc;
+}
+
+.cursor_pointer {
+    cursor: pointer;
 }

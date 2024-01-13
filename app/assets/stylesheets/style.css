@@ -7,14 +7,6 @@ body {
   margin-left: 8px !important;
 }
 
-.border-default{
-  border: 1px solid #1977cc;
-}
-
-.border-default:hover{
-  border: 1px solid #1977cc;
-}
-
 a {
   color: #1977cc;
   text-decoration: none;
@@ -1237,7 +1229,7 @@ section {
   border-radius: 50px;
   width: 32px;
   height: 32px;
-  background: #a0bcd5;
+  background: #1977cc;
 }
 
 .doctors .member .social a i {
@@ -1247,7 +1239,7 @@ section {
 }
 
 .doctors .member .social a:hover {
-  background: #1977cc;
+  background: #a0bcd5;
 }
 
 .doctors .member .social a+a {

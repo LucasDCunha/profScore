@@ -4,6 +4,10 @@ class SubjectsController < ApplicationController
   # GET /subjects or /subjects.json
   def index
     @subjects = Subject.all
+    @subjectsOldNMand = Subject.all.select { |sub| sub.code.include?('2008') && !sub.mandatory }
+    @subjectsOldMand = Subject.all.select { |sub| sub.code.include?('2008') && sub.mandatory }
+    @subjectsNewNMand = Subject.all.select { |sub| sub.code.include?('2023') && !sub.mandatory }
+    @subjectsNewMand = Subject.all.select { |sub| sub.code.include?('2023') && sub.mandatory }
   end
 
   # GET /subjects/1 or /subjects/1.json

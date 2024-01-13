@@ -3,7 +3,7 @@ class TeachersController < ApplicationController
 
   # GET /teachers or /teachers.json
   def index
-    @teachers = Teacher.all
+    @teachers = Teacher.all.sort_by {|obj| obj.name}
   end
 
   # GET /teachers/1 or /teachers/1.json
