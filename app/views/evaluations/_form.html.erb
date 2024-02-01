@@ -1,17 +1,26 @@
-<%= form_with(model: evaluation) do |form| %>
-  <% if evaluation.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(evaluation.errors.count, "error") %> prohibited this evaluation from being saved:</h2>
+<%= simple_form_for @evaluation do |f| %>
+  <label class="label-items">Nota geral</label>
+  <%= f.input :overallGrade, label: false, input_html: { class: 'toggle-two' } %>
+  <label class="label-items">tempo utilizado</label>
+  <%= f.input :usedTime, label: false, as: :boolean %>
+  <label class="label-items">coisas externas</label>
+  <%= f.input :externalThings, label: false, as: :boolean %>
+  <label class="label-items">conhecimento</label>
+  <%= f.input :goodKnoledge, label: false, as: :boolean %>
+  <label class="label-items">de novo?</label>
+  <%= f.input :takeAgain, label: false, as: :boolean %>
+  <label class="label-items">cobra presença?</label>
+  <%= f.input :attendenceDemand, label: false, as: :boolean %>
 
-      <ul>
-        <% evaluation.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div>
-    <%= form.submit %>
-  </div>
+  <%= f.button :submit, 'Enviar avaliação', class: 'btn btn-primary' %>
 <% end %>
+
+<script>
+  $('.toggle-two').bootstrapToggle({
+    on: 'Sim',
+    off: 'Não',
+    onstyle: 'success',
+    offstyle: 'danger',
+    style: 'checkbox-eval'
+  }).bootstrapToggle('on');
+</script>

@@ -18,13 +18,14 @@
             <div>
                 <% if user_signed_in? %>
                     <div class='d-flex'>
-                        <%= link_to root_path, class: "appointment-btn scrollto" do %>
+                        <%= link_to new_evaluation_path, class: "appointment-btn scrollto" do %>
                             Avaliar
                         <% end %>
                         <div class="dropdown">
                             <i class="fa-solid fa-user profile-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 <li><%= link_to 'Deslogar', destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
+                                <li><%= link_to 'Minha conta', edit_user_registration_path, class: "dropdown-item" %></li>
                             </ul>
                         </div>
                     <div>

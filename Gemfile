@@ -81,6 +81,7 @@ gem 'faker'
 gem 'devise'
 gem 'webpacker'
 gem 'bootstrap'
+gem 'simple_form'
 
 # Env file
 gem 'dotenv-rails', groups: [:development, :test]

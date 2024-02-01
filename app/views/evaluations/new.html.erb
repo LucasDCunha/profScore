@@ -1,9 +1,34 @@
-<h1>New evaluation</h1>
+<main id="main">
+  <!-- ======= Breadcrumbs Section ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
 
-<%= render "form", evaluation: @evaluation %>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <%= link_to root_path do %>
+              <i class="fa-solid fa-arrow-left p-2 text-dark" data-toggle="tooltip" data-placement="top" title="Votar"></i>
+          <% end %>
+          <h2>Avaliação</h2>
+        </div>
+        <ol>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Avaliação', new_evaluation_path %></li>
+        </ol>
+      </div>
 
-<br>
+    </div>
+  </section><!-- End Breadcrumbs Section -->
 
-<div>
-  <%= link_to "Back to evaluations", evaluations_path %>
-</div>
+  <section class="inner-page">
+    <div class="container">
+      <%= render "form" %>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>  

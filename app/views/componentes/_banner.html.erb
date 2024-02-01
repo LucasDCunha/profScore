@@ -4,7 +4,7 @@
       <h1>Bem vindo ao <span class='color-default'>Profscore!</span></h1>
       <h2>Saiba o que os alunos pensam dos professores do curso</h2>
       <% if user_signed_in? %>
-        <%= link_to root_path, class: "btn-get-started scrollto" do %>
+        <%= link_to new_evaluation_path, class: "btn-get-started scrollto" do %>
           Avaliar
         <% end %>
       <% else %>
