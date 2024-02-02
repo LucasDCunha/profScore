@@ -12,7 +12,7 @@ puts "Deleted all Subjects"
         position: 'Professora',
         email: 'adriana@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/1841338064901299',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -20,7 +20,7 @@ puts "Deleted all Subjects"
         position: 'Diretor Substituto da EIA',
         email: 'andreatt@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/5998143228852295',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -28,7 +28,7 @@ puts "Deleted all Subjects"
         position: 'Professora',
         email: 'bruna.diirr@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/2345343862234386',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -36,7 +36,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'beto@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/8020803376969953',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -44,7 +44,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'mello@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/2417341890473612',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -52,7 +52,7 @@ puts "Deleted all Subjects"
         position: 'Professora',
         email: 'cristina.bicharra@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/4879977915136752',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -60,7 +60,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'fabriciorsf@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/2425467784030941',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -68,7 +68,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'gleison.santos@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/4616202382103338',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -76,7 +76,7 @@ puts "Deleted all Subjects"
         position: 'Diretora da EIA',
         email: 'geiza.hamazaki@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/2100358669537195',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -84,7 +84,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'hsousa@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/5825446300218282',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -92,7 +92,7 @@ puts "Deleted all Subjects"
         position: 'Coordenador do BSI',
         email: 'jefferson.simoes@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/6938694286834426',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -100,7 +100,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'jobson@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/9342328333913115',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -108,7 +108,7 @@ puts "Deleted all Subjects"
         position: 'Coordenador de Inovação Tecnológica, Cultural e Social/PROPGPI',
         email: 'ricardo.cereja@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/7653288098116734',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -116,7 +116,7 @@ puts "Deleted all Subjects"
         position: 'Professora',
         email: 'laura@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/3138892444406479',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -124,7 +124,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'leonardo@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/0780057318850413',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -132,7 +132,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'marcio.barros@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/0821562324429813',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -140,7 +140,7 @@ puts "Deleted all Subjects"
         position: 'Professora',
         email: 'gutanunes@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/9923270028346687',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -148,7 +148,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'pimentel@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/1920411639358905',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -156,7 +156,7 @@ puts "Deleted all Subjects"
         position: 'Professora',
         email: 'morganna@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/1415781875529432',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -164,7 +164,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'pasemes@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/4314710449766037',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -172,7 +172,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'pedro.moura@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/6178823954090208',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -180,7 +180,7 @@ puts "Deleted all Subjects"
         position: 'professor',
         email: 'reinaldoviana@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/1606128499503996',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -188,7 +188,7 @@ puts "Deleted all Subjects"
         position: 'Professor',
         email: 'rps@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/8613736894676086',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -196,7 +196,7 @@ puts "Deleted all Subjects"
         position: 'Coordenador do PPGI',
         email: 'sean@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/2562652838103607',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -204,7 +204,7 @@ puts "Deleted all Subjects"
         position: 'Decano do CCET',
         email: 'sidney@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/7099151449971406',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -212,7 +212,7 @@ puts "Deleted all Subjects"
         position: 'Professora',
         email: 'simone@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/0926018459123736',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -220,7 +220,7 @@ puts "Deleted all Subjects"
         position: 'Coordenador do Mestrado do PPGI',
         email: 'tadeu.classe@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/4540774422689570',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -228,7 +228,7 @@ puts "Deleted all Subjects"
         position: 'Chefe do DIA',
         email: 'vania@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/0398675521406529',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -236,7 +236,7 @@ puts "Deleted all Subjects"
         position: 'Professor de Matemática',
         email: 'jose.calneto@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/2637672868100554',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -244,7 +244,7 @@ puts "Deleted all Subjects"
         position: 'Professor de Matemática',
         email: 'acirjunior@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/7637282964789451',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -252,7 +252,7 @@ puts "Deleted all Subjects"
         position: 'Professor de Métodos Quantitativos',
         email: 'felipe.ribeiro@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/4949636001535630',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -260,7 +260,7 @@ puts "Deleted all Subjects"
         position: 'Professor de Métodos Quantitativos',
         email: 'alexandre.silva@uniriotec.br',
         lattes: 'http://lattes.cnpq.br/4763659817918925',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     Teacher.create!(
@@ -268,7 +268,7 @@ puts "Deleted all Subjects"
         position: 'Professora de Processos Técnico-Documentais',
         email: '',
         lattes: 'http://lattes.cnpq.br/3016039445395473',
-        overallGrade: rand(0.0...10.0)
+        overallGrade: rand(0.0..10.0).round(2)
     )
 
     puts "Teachers created"
