@@ -1,8 +1,21 @@
 <%= simple_form_for @evaluation do |f| %>
   <label class="label-items">Nota geral</label>
-  <%= f.input :overallGrade, label: false, input_html: { class: 'toggle-two' } %>
+  <%= f.input :overallGrade, label: false, input_html: { class: '' } %>
+
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-6">
+          <input type="checkbox" class="checkbox">
+          <div class="knobs">
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+
+
   <label class="label-items">tempo utilizado</label>
-  <%= f.input :usedTime, label: false, as: :boolean %>
+  <%= f.input :usedTime, label: false, as: :boolean, input_html: { class: '' } %>
   <label class="label-items">coisas externas</label>
   <%= f.input :externalThings, label: false, as: :boolean %>
   <label class="label-items">conhecimento</label>
@@ -14,13 +27,3 @@
 
   <%= f.button :submit, 'Enviar avaliação', class: 'btn btn-primary' %>
 <% end %>
-
-<script>
-  $('.toggle-two').bootstrapToggle({
-    on: 'Sim',
-    off: 'Não',
-    onstyle: 'success',
-    offstyle: 'danger',
-    style: 'checkbox-eval'
-  }).bootstrapToggle('on');
-</script>
