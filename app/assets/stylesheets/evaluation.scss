@@ -41,6 +41,10 @@
 	background-color: rgba(0, 0, 16, 0.8);
 	border-radius: 2.2rem;
     padding: 4px;
+
+    & span{
+        display: flex;
+    }
 }
 
 svg {
@@ -48,12 +52,6 @@ svg {
 	height: 2rem;
 	width: 2rem;
 	margin: 0.2rem 0.8rem;
-}
-
-.rating-form-2 svg {
-	height: 3rem;
-	width: 3rem;
-	margin: 0.5rem;
 }
 
 #radios label {
