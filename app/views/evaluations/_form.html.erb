@@ -1,10 +1,20 @@
 <%= simple_form_for @evaluation do |f| %>
-  <label class="label-items">Nota geral</label>
-  <%= f.input :overallGrade, label: false %>
+<div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="label-items">Qual professor deseja avaliar?</label>
+      <%= f.collection_select :teacher, Teacher.all, :id, :name, { prompt: "Escolha o Professor" }, { style: 'width: 90% !important;' } %>
+    </div>
+    <div class="col-md-6">
+      <label class="label-items">Qual disciplina o professor lecionou?</label>
+      <%= f.collection_select :subject, Subject.all, :id, :name, { prompt: "Escolha a disciplina" }, { style: 'width: 90% !important;' } %>
+    </div>
+  </div>
+    
+    
+  <label class="label-items">Nota geral: <span id="ex6SliderVal">0</span></label>
+  <%= f.input :overallGrade, as: :range, label: false, input_html:{ min:"0", max:"10", class: ''} %>
   <label class="label-items">tempo utilizado</label>
-  <%= f.collection_radio_buttons :usedTime, [[false, 'Nao'] ,[true, 'Sim']],:first, :last  do |b| %>
-    <% b.label(class: "") { b.radio_button(class: "") } %>
-  <% end %>
+  <%= f.collection_radio_buttons :usedTime, [[false, 'Nao'] ,[true, 'Sim']],:first, :last %>
   <br>
   <label class="label-items">coisas externas</label>
   <%= f.input :externalThings, label: false, as: :boolean %>
@@ -17,3 +27,14 @@
 
   <%= f.button :submit, 'Enviar avaliação', class: 'btn btn-primary' %>
 <% end %>
+
+<script>
+  $(document).ready(function() { 
+    $('#evaluation_teacher').select2();
+    $('#evaluation_subject').select2();
+    $("#evaluation_overallGrade").slider({ min: 0, max: 10, value: 0, focus: true });
+    $("#evaluation_overallGrade").on("slide", function(slideEvt) {
+      $("#ex6SliderVal").text(slideEvt.value);
+    });
+  });
+</script>

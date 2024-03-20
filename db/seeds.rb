@@ -1222,5 +1222,11 @@ puts "Deleted all Subjects"
             mandatory: false,
             code: '2023.2'
         )
+
+        Subject.create!(
+            name: 'Outra',
+            mandatory: false,
+            code: '2008.1 2023.2'
+        )
     
     puts "Subjects created"

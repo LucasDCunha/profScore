@@ -13,6 +13,8 @@ class EvaluationsController < ApplicationController
   # GET /evaluations/new
   def new
     @evaluation = Evaluation.new
+    @profs = Teacher.all
+    @subs = Subject.all
   end
 
   # GET /evaluations/1/edit
