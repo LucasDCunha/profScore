@@ -1,21 +1,11 @@
 <%= simple_form_for @evaluation do |f| %>
   <label class="label-items">Nota geral</label>
-  <%= f.input :overallGrade, label: false, input_html: { class: '' } %>
-
-    <div class="toggle-button-cover">
-      <div class="button-cover">
-        <div class="button r" id="button-6">
-          <input type="checkbox" class="checkbox">
-          <div class="knobs">
-          </div>
-          <div class="layer"></div>
-        </div>
-      </div>
-    </div>
-
-
+  <%= f.input :overallGrade, label: false %>
   <label class="label-items">tempo utilizado</label>
-  <%= f.input :usedTime, label: false, as: :boolean, input_html: { class: '' } %>
+  <%= f.collection_radio_buttons :usedTime, [[false, 'Nao'] ,[true, 'Sim']],:first, :last  do |b| %>
+    <% b.label(class: "") { b.radio_button(class: "") } %>
+  <% end %>
+  <br>
   <label class="label-items">coisas externas</label>
   <%= f.input :externalThings, label: false, as: :boolean %>
   <label class="label-items">conhecimento</label>
