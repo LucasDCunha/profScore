@@ -43,9 +43,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_29_172846) do
   end
 
   create_table "evaluations", force: :cascade do |t|
-    t.bigint "User_id"
-    t.bigint "Teacher_id"
-    t.bigint "Subject_id"
+    t.bigint "user_id"
+    t.bigint "teacher_id"
+    t.bigint "subject_id"
     t.integer "overallGrade"
     t.boolean "usedTime"
     t.boolean "externalThings"
@@ -54,9 +54,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_29_172846) do
     t.boolean "attendenceDemand"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Subject_id"], name: "index_evaluations_on_Subject_id"
-    t.index ["Teacher_id"], name: "index_evaluations_on_Teacher_id"
-    t.index ["User_id"], name: "index_evaluations_on_User_id"
+    t.index ["subject_id"], name: "index_evaluations_on_subject_id"
+    t.index ["teacher_id"], name: "index_evaluations_on_teacher_id"
+    t.index ["user_id"], name: "index_evaluations_on_user_id"
   end
 
   create_table "student_teacher_subjects", force: :cascade do |t|

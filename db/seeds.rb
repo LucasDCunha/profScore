@@ -336,7 +336,7 @@ puts "Deleted all Subjects"
         Subject.create!(
             name: 'Desenvolvimento de Páginas Web',
             mandatory: true,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
@@ -432,13 +432,13 @@ puts "Deleted all Subjects"
         Subject.create!(
             name: 'Projeto de Graduação I',
             mandatory: true,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
             name: 'Projeto de Graduação II',
             mandatory: true,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
@@ -492,19 +492,19 @@ puts "Deleted all Subjects"
         Subject.create!(
             name: 'Administração de Banco de Dados',
             mandatory: false,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
             name: 'Algoritmos para Problemas Combinatórios',
             mandatory: false,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
             name: 'Ambiente Operacional Unix',
             mandatory: false,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
@@ -528,19 +528,19 @@ puts "Deleted all Subjects"
         Subject.create!(
             name: 'Desenvolvimento de Servidor Web',
             mandatory: false,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
             name: 'Fluxos em Redes',
             mandatory: false,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
             name: 'Fundamentos de Representação de Conhecimento e Raciocínio',
             mandatory: false,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
@@ -558,7 +558,7 @@ puts "Deleted all Subjects"
         Subject.create!(
             name: 'Informática na Educação',
             mandatory: false,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
@@ -570,13 +570,13 @@ puts "Deleted all Subjects"
         Subject.create!(
             name: 'Programação Linear',
             mandatory: false,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
             name: 'Sistemas Colaborativos',
             mandatory: false,
-            code: '2008.1'
+            code: '2008.1 2023.2'
         )
 
         Subject.create!(
@@ -773,18 +773,6 @@ puts "Deleted all Subjects"
         )
 
         Subject.create!(
-            name: 'Desenvolvimento de Páginas Web',
-            mandatory: false,
-            code: '2023.2'
-        )
-
-        Subject.create!(
-            name: 'Informática na Educação',
-            mandatory: false,
-            code: '2023.2'
-        )
-
-        Subject.create!(
             name: 'Novas Formas de Economia',
             mandatory: false,
             code: '2023.2'
@@ -804,12 +792,6 @@ puts "Deleted all Subjects"
 
         Subject.create!(
             name: 'Projeto de Aplicação de Sistemas de Informação em um Contexto Específico',
-            mandatory: false,
-            code: '2023.2'
-        )
-
-        Subject.create!(
-            name: 'Sistemas Colaborativos',
             mandatory: false,
             code: '2023.2'
         )
@@ -857,12 +839,6 @@ puts "Deleted all Subjects"
         )
 
         Subject.create!(
-            name: 'Algoritmos para Problemas Combinatórios',
-            mandatory: false,
-            code: '2023.2'
-        )
-
-        Subject.create!(
             name: 'Análise Multiparadigma de Algoritmos',
             mandatory: false,
             code: '2023.2'
@@ -899,18 +875,6 @@ puts "Deleted all Subjects"
         )
 
         Subject.create!(
-            name: 'Fluxos em Redes',
-            mandatory: false,
-            code: '2023.2'
-        )
-
-        Subject.create!(
-            name: 'Fundamentos de Representação de Conhecimento e Raciocínio',
-            mandatory: false,
-            code: '2023.2'
-        )
-
-        Subject.create!(
             name: 'Heurísticas Inteligentes: Técnicas e Aplicações',
             mandatory: false,
             code: '2023.2'
@@ -936,12 +900,6 @@ puts "Deleted all Subjects"
 
         Subject.create!(
             name: 'Processamento Baseado em Restrições',
-            mandatory: false,
-            code: '2023.2'
-        )
-
-        Subject.create!(
-            name: 'Programação Linear',
             mandatory: false,
             code: '2023.2'
         )
@@ -978,12 +936,6 @@ puts "Deleted all Subjects"
 
         Subject.create!(
             name: 'Tópicos em Processamento de Linguagem Natural',
-            mandatory: false,
-            code: '2023.2'
-        )
-
-        Subject.create!(
-            name: 'Desenvolvimento de Servidor Web',
             mandatory: false,
             code: '2023.2'
         )
@@ -1092,12 +1044,6 @@ puts "Deleted all Subjects"
         )
 
         Subject.create!(
-            name: 'Administração de Banco de Dados',
-            mandatory: false,
-            code: '2023.2'
-        )
-
-        Subject.create!(
             name: 'Banco de Dados Distribuídos',
             mandatory: false,
             code: '2023.2'
@@ -1141,12 +1087,6 @@ puts "Deleted all Subjects"
 
         Subject.create!(
             name: 'Projetos de Ciência de Dados para o Bem-Estar Social',
-            mandatory: false,
-            code: '2023.2'
-        )
-
-        Subject.create!(
-            name: 'Ambiente Operacional UNIX',
             mandatory: false,
             code: '2023.2'
         )

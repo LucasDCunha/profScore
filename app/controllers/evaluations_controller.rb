@@ -1,4 +1,5 @@
 class EvaluationsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_evaluation, only: %i[ show edit update destroy ]
 
   # GET /evaluations or /evaluations.json
@@ -24,14 +25,13 @@ class EvaluationsController < ApplicationController
   # POST /evaluations or /evaluations.json
   def create
     @evaluation = Evaluation.new(evaluation_params)
-
+    @evaluation.user = current_user
     respond_to do |format|
-      if @evaluation.save
-        format.html { redirect_to evaluation_url(@evaluation), notice: "Evaluation was successfully created." }
-        format.json { render :show, status: :created, location: @evaluation }
+      if @evaluation.save!
+        TeachersController.new.update_prof_score(@evaluation.teacher)
+        format.html { redirect_to teacher_url(@evaluation.teacher), notice: "Avaliação criada com sucesso!" }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @evaluation.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -67,6 +67,15 @@ class EvaluationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def evaluation_params
-      params.fetch(:evaluation, {})
+      params.require(:evaluation).permit(
+        :teacher_id,
+        :subject_id,
+        :overallGrade,
+        :usedTime,
+        :externalThings,
+        :goodKnoledge,
+        :takeAgain,
+        :attendenceDemand
+      )
     end
 end
