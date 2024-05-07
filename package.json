@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/LucasDCunha/ProfScore.git",
   "author": "LucasDC <46499843+LucasDCunha@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild app/javascript/. --bundle --sourcemap --outdir=app/assets/builds"
+  }
 }
