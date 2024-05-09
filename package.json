@@ -6,6 +6,7 @@
   "author": "LucasDC <46499843+LucasDCunha@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "build": "esbuild app/javascript/. --bundle --sourcemap --outdir=app/assets/builds"
+    "build": "esbuild app/javascript/. --bundle --sourcemap --outdir=app/assets/builds",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css"
   }
 }
