@@ -1,8 +1,8 @@
 {
-  "name": "ProfScore",
+  "name": "profScore",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/LucasDCunha/ProfScore.git",
+  "repository": "https://github.com/LucasDCunha/profScore.git",
   "author": "LucasDC <46499843+LucasDCunha@users.noreply.github.com>",
   "license": "MIT"
 }
