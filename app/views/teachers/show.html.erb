@@ -23,11 +23,35 @@
   <section class="inner-page">
     <div class="container">
       <div class='row'>
-        <div class="col-6 col-sm-12 d-flex">
-          <span class='grade color-default mx-2'><%= @teacher.overallGrade %></span>
-          <span class='color-secondary pt-4 mx-2'> / 10</span>
+        <div class="col-lg-4 col-sm-12 d-flex flex-column">
+          <div class="d-flex">
+            <span class='grade color-default mx-2'><%= @teacher.overallGrade %></span>
+            <span class='color-secondary pt-4 mx-2'> / 10</span>
+          </div>
+          <small> Baseado em <%= @teacher.evaluations.count %> avaliacoes </small>
         </div>
       </div>
+
+      <% @teacher.evaluations.each do |eval| %>
+        <div class="row d-flex justify-content-center">
+          <div class="card my-4 col-9">
+            <div class="card-body">
+                <div class='d-flex justify-content-between'>
+                  <%= eval.overallGrade%>
+                  <%= eval.externalThings%>
+                  <%= eval.goodKnoledge%>
+                  <%= eval.takeAgain%>
+                  <%= eval.attendenceDemand%>
+                  <%= eval.usedTime%>
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+
+
     </div>
   </section>
 

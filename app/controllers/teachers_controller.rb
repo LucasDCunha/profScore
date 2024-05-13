@@ -66,6 +66,7 @@ class TeachersController < ApplicationController
         count += 1
     end
     @teacher.overallGrade = grade/count
+    @teacher.overallGrade.round(2)
     @teacher.save
   end
 
