@@ -37,15 +37,21 @@
           <div class="card my-4 col-9">
             <div class="card-body">
               <div class='d-flex justify-content-start'>
-                <div class="overall-grade active if false">
+                <div class="overall-grade mx-3 col-1 text-center align-content-center">
                   <%= eval.overallGrade %>
                 </div>
-                <div>
-                  <%= eval.externalThings %>
-                  <%= eval.goodKnoledge %>
-                  <%= eval.takeAgain %>
-                  <%= eval.attendenceDemand %>
-                  <%= eval.usedTime %>
+                <div class="d-flex flex-column col-10">
+                  <div class="row">
+                    <span class="col-6"> Compreensivo: <%= eval.externalThings ? "Sim" : "Nao" %> </span>
+                    <span class="col-6"> Domina a materia: <%= eval.goodKnoledge ? "Sim" : "Nao" %> </span>
+                  </div>
+                  <div class="row">
+                    <span class="col-6"> Recomendaria: <%= eval.takeAgain ? "Sim" : "Nao" %> </span>
+                    <span class="col-6"> Reprova por falta: <%= eval.attendenceDemand ? "Sim" : "Nao" %> </span>
+                  </div>
+                  <div class="row">
+                    <span class="col-6"> Tempo bem utilizado: <%= eval.usedTime ? "Sim" : "Nao" %> </span>
+                  </div>
                 </div>
               </div>
             </div>
