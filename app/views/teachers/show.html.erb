@@ -23,12 +23,25 @@
   <section class="inner-page">
     <div class="container">
       <div class='row'>
-        <div class="col-lg-4 col-sm-12 d-flex flex-column">
+        <div class="col-lg-3 col-sm-12 d-flex flex-column">
           <div class="d-flex">
             <span class='grade color-default mx-2'><%= @teacher.overallGrade %></span>
             <span class='color-secondary pt-4 mx-2'> / 10</span>
           </div>
-          <small> Baseado em <%= @teacher.evaluations.count %> avaliacoes </small>
+          <small> Baseado em <%= @totEvaluations %> avaliacoes </small>
+        </div>
+
+        <div class="col-lg-8 col-sm-12 d-flex flex-column">
+          <div class="card">
+            <div class="card-body">
+              <%= @totExternalThings %>
+              <%= @totGoodKnoledge %>
+              <%= @totTakeAgain %>
+              <%= @totAttendenceDemand %>
+              <%= @totUsedTime %>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -37,20 +50,20 @@
           <div class="card my-4 col-9">
             <div class="card-body">
               <div class='d-flex justify-content-start'>
-                <div class="overall-grade mx-3 col-1 text-center align-content-center">
-                  <%= eval.overallGrade %>
+                <div class="col-lg-2">
+                  <span class="overall-grade <%= eval.overallGrade >= 7 ? "bg-success" : eval.overallGrade <= 3 ? "bg-danger" : "bg-warning" %>"><%= eval.overallGrade %></span>
                 </div>
                 <div class="d-flex flex-column col-10">
                   <div class="row">
-                    <span class="col-6"> Compreensivo: <%= eval.externalThings ? "Sim" : "Nao" %> </span>
-                    <span class="col-6"> Domina a materia: <%= eval.goodKnoledge ? "Sim" : "Nao" %> </span>
+                    <span class="col-6"> Compreensivo: <span class="font-weight-bold"><%= eval.externalThings ? "Sim" : "Nao" %></span></span>
+                    <span class="col-6"> Domina a materia: <span class="font-weight-bold"><%= eval.goodKnoledge ? "Sim" : "Nao" %></span></span>
                   </div>
                   <div class="row">
-                    <span class="col-6"> Recomendaria: <%= eval.takeAgain ? "Sim" : "Nao" %> </span>
-                    <span class="col-6"> Reprova por falta: <%= eval.attendenceDemand ? "Sim" : "Nao" %> </span>
+                    <span class="col-6"> Recomendaria: <span class="font-weight-bold"><%= eval.takeAgain ? "Sim" : "Nao" %></span></span>
+                    <span class="col-6"> Reprova por falta: <span class="font-weight-bold"><%= eval.attendenceDemand ? "Sim" : "Nao" %></span></span>
                   </div>
                   <div class="row">
-                    <span class="col-6"> Tempo bem utilizado: <%= eval.usedTime ? "Sim" : "Nao" %> </span>
+                    <span class="col-6"> Tempo bem utilizado: <span class="font-weight-bold"><%= eval.usedTime ? "Sim" : "Nao" %></span></span>
                   </div>
                 </div>
               </div>
