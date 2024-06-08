@@ -8,11 +8,11 @@ class TeachersController < ApplicationController
 
   # GET /teachers/1 or /teachers/1.json
   def show
-    @totExternalThings = @teacher.evaluations.where(externalThings: true).count
-    @totGoodKnoledge = @teacher.evaluations.where(goodKnoledge: true).count
-    @totTakeAgain = @teacher.evaluations.where(takeAgain: true).count
-    @totAttendenceDemand = @teacher.evaluations.where(attendenceDemand: true).count
-    @totUsedTime = @teacher.evaluations.where(usedTime: true).count
+    @totTrueExternalThings = @teacher.evaluations.where(externalThings: true).count
+    @totTrueGoodKnoledge = @teacher.evaluations.where(goodKnoledge: true).count
+    @totTrueTakeAgain = @teacher.evaluations.where(takeAgain: true).count
+    @totTrueAttendenceDemand = @teacher.evaluations.where(attendenceDemand: true).count
+    @totTrueUsedTime = @teacher.evaluations.where(usedTime: true).count
     @totEvaluations = @teacher.evaluations.count
   end
 
