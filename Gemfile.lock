@@ -116,6 +116,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     ffi (1.16.3)
     ffi (1.16.3-x64-mingw-ucrt)
+    ffi (1.16.3-x86-mingw32)
     font-awesome-sass (6.5.1)
       sassc (~> 2.0)
     globalid (1.2.1)
@@ -169,11 +170,14 @@ GEM
     nio4r (2.7.0)
     nokogiri (1.15.5-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.15.5-x86-mingw32)
+      racc (~> 1.4)
     nokogiri (1.15.5-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.4)
     pg (1.5.4-x64-mingw-ucrt)
+    pg (1.5.4-x86-mingw32)
     platform-api (3.5.0)
       heroics (~> 0.1.1)
       moneta (~> 1.0.0)
@@ -187,7 +191,7 @@ GEM
       pry (>= 0.13, < 0.15)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    psych (5.1.2)
+    psych (4.0.6)
       stringio
     public_suffix (5.0.4)
     puma (6.4.0)
@@ -311,6 +315,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86-mingw32
   x86_64-darwin-22
 
 DEPENDENCIES
@@ -330,6 +335,7 @@ DEPENDENCIES
   platform-api
   pry-byebug
   pry-rails
+  psych (~> 4)
   puma
   pundit
   rails (~> 7.0.6)

@@ -82,6 +82,7 @@ gem 'devise'
 gem 'webpacker'
 gem 'bootstrap'
 gem 'simple_form'
+gem 'psych', '~> 4'
 
 # Env file
 gem 'dotenv-rails', groups: [:development, :test]
